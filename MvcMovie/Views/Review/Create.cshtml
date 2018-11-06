@@ -1,0 +1,48 @@
+﻿@model MvcMovie.Models.Review
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Review</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ReviewMaker" class="control-label"></label>
+                <input asp-for="ReviewMaker" class="form-control" />
+                <span asp-validation-for="ReviewMaker" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserReview" class="control-label"></label>
+                <input asp-for="UserReview" class="form-control" />
+                <span asp-validation-for="UserReview" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MovieID" class="control-label"></label>
+                <input asp-for="MovieID" class="form-control" />
+                <span asp-validation-for="MovieID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MovieTitle" class="control-label"></label>
+                <input asp-for="MovieTitle" class="form-control" />
+                <span asp-validation-for="MovieTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

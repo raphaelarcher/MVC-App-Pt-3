@@ -1,0 +1,42 @@
+﻿@model MvcMovie.Models.Review
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Review</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReviewMaker)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReviewMaker)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserReview)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserReview)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MovieID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MovieTitle)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
